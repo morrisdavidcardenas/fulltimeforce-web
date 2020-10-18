@@ -15,6 +15,13 @@ export class CommitHistoryComponent implements OnInit {
   constructor( private gitService: GitService ) { }
 
   ngOnInit() {
+    this.getGitCommitList();
+  }
 
+  getGitCommitList() {
+    this.gitService.getGitCommitList()
+      .subscribe( response => {
+        this.dataSource = response;
+      });
   }
 }

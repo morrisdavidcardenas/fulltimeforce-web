@@ -20,7 +20,7 @@ export class GitService {
     );
   }
 
-  formatDataGitCommitList( elementList: object ) {
+  private formatDataGitCommitList( elementList: object ) {
     const gitCommitList: GitCommitListModel[] = [];
     Object.keys( elementList ).forEach( key => {
       const entity : GitCommitListModel = new GitCommitListModel();
