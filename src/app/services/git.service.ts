@@ -12,7 +12,7 @@ export class GitService {
   constructor( private http: HttpClient ) { }
 
   getGitCommitList() {
-    let url = environment.baseURL + 'gitHub/repos/morrisdavidcardenas/nu-api/commits';
+    let url = environment.baseURL + 'gitHub/repos/morrisdavidcardenas/fulltimeforce-web/commits';
     return this.http.get(url)
     .pipe(
       map( this.formatDataGitCommitList ),
